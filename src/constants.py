@@ -1,2 +1,2 @@
-largura = 1024
-altura = 768
+largura_tela = 1024
+altura_tela = 768
