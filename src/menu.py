@@ -98,8 +98,8 @@ def seleciona_personagens(tela, personagens):
     personagens_selecionados = []
     qtd_personagens_selecionados = 0
     pos_menu = personagens[0].posicao_menu
-    img_seta = pygame.image.load('images/seta.png')
-    img_seta = pygame.transform.scale(img_seta, (50, 50))
+    img_seta = pygame.image.load('images/menu/seta.png')
+    img_seta = pygame.transform.scale(img_seta, (300, 300))
 
     while qtd_personagens_selecionados < 3:
         cor_texto_info = (203, 54, 23)
