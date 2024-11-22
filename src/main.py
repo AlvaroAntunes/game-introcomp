@@ -10,6 +10,7 @@ def main():
     tela = pygame.display.set_mode((largura_tela, altura_tela))
 
     run = True
+    clock = pygame.time.Clock()
 
     while run:
         for event in pygame.event.get():
@@ -21,6 +22,7 @@ def main():
 
         # Atualização da tela depois de desenhar.
         pygame.display.flip()
+        clock.tick(60)
 
     pygame.quit()
 
