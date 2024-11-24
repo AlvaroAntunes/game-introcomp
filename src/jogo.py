@@ -17,6 +17,7 @@ def realiza_batalha(tela, personagens_selecionados):
         Inimigo.verifica_inimigos_vivos(inimigos)
 
         if len(personagens_selecionados) <= 0 and len(inimigos) > 0:
+            pygame.time.delay(500)
             return False
         elif len(inimigos) <= 0 and len(personagens_selecionados) > 0:
             return True
