@@ -1,7 +1,9 @@
 import pygame # type: ignore
 from constants import largura_tela, altura_tela
 from menu import desenha_menu
-from jogo import realiza_batalha
+from jogo import realiza_batalha, tela_final
+from inimigos import Inimigo
+import copy
 
 def main():
     pygame.init()
@@ -17,10 +19,17 @@ def main():
             if event.type == pygame.QUIT:
                 run = False
 
-            personagens_selecionados = desenha_menu(tela)
-            realiza_batalha(tela, personagens_selecionados)
+        personagens_selecionados = desenha_menu(tela)
+        personagens_selecionados_copy = copy.copy(personagens_selecionados)
+        inimigos = Inimigo.cria_inimigos()
+        ganhou = realiza_batalha(tela, personagens_selecionados)
 
-        # Atualização da tela depois de desenhar.
+        if ganhou:
+            mensagem = 'Parabens, voce venceu!'
+        else:
+            mensagem = 'Tente novamente, voce perdeu!'
+        
+        tela_final(tela, personagens_selecionados_copy, inimigos, mensagem)
         pygame.display.flip()
         clock.tick(60)
 

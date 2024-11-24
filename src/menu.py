@@ -134,6 +134,7 @@ def seleciona_personagens(tela, personagens):
                             else:
                                 personagem.selecionado = False
                                 qtd_personagens_selecionados -= 1
+                                personagens_selecionados.remove(personagem)
                                 break
 
         desenha_fundo(tela)
