@@ -71,6 +71,7 @@ def seleciona_opcao(tela, personagens_selecionados, inimigos, posicoes_info, tur
                             personagem_atual.defende()
                         elif pos_menu == 2:
                             personagem_atual.habilidade()
+                            atacou_inimigo = personagem_atual.ataca_inimigo(tela, inimigos, personagens_selecionados, personagem_atual)
                             
                         if atacou_inimigo:
                             turno.pop(0)
