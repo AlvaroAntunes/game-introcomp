@@ -2,6 +2,7 @@ import pygame # type: ignore
 from pygame.locals import *
 from constants import largura_tela, altura_tela, x_info_batalha, y_info_batalha, x_info_personagens, y_info_personagens
 
+# Testando
 def desenha_fundo(tela, personagens_selecionados):
     img_fundo = pygame.image.load('images/batalha/fundo-batalha.png')
     img_fundo = pygame.transform.scale(img_fundo, (largura_tela, altura_tela))
